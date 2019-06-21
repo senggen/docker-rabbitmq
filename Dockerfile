@@ -7,7 +7,10 @@ RUN apt -y update && \
     cd /root &&
     unzip rabbitmq_delayed_message_exchange-20171201-3.7.x.zip && \
     mv rabbitmq_delayed_message_exchange-20171201-3.7.x.ez /opt/rabbitmq/plugins/ && \
-    rm -rf /root/rabbitmq_delayed_message_exchange-20171201-3.7.x.zip
+    rm -rf /root/rabbitmq_delayed_message_exchange-20171201-3.7.x.zip && \
+    apt-get clean && \
+    apt-get -y autoremove && \
+    rm -rf /var/lib/apt/lists/*
     
 ADD run.sh /root/run.sh && \
     chmod +x run.sh
