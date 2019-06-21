@@ -12,7 +12,7 @@ RUN apt -y update && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
     
-ADD run.sh /root/run.sh
+ADD run.sh /root
 RUN chmod +x run.sh
     
 CMD ["/bin/sh", "/root/run.sh"]
