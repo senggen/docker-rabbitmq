@@ -4,7 +4,7 @@ ADD https://dl.bintray.com/rabbitmq/community-plugins/3.7.x/rabbitmq_delayed_mes
 
 RUN apt -y update && \
     apt -y install unzip && \
-    cd /root &&
+    cd /root && \
     unzip rabbitmq_delayed_message_exchange-20171201-3.7.x.zip && \
     mv rabbitmq_delayed_message_exchange-20171201-3.7.x.ez /opt/rabbitmq/plugins/ && \
     rm -rf /root/rabbitmq_delayed_message_exchange-20171201-3.7.x.zip && \
