@@ -13,6 +13,6 @@ RUN apt -y update && \
     rm -rf /var/lib/apt/lists/*
     
 ADD run.sh /root
-RUN chmod +x run.sh
+RUN chmod +x /root/run.sh
     
 CMD ["/bin/sh", "/root/run.sh"]
