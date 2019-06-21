@@ -11,7 +11,7 @@ RUN apt -y update && \
     apt-get clean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/* && \
-    sed -i 's/{loopback_users, \[<<"guest">>\]},/{loopback_users, \[\]},/g' rabbit.app
+    sed -i 's/{loopback_users, \[<<"guest">>\]},/{loopback_users, \[\]},/g' /opt/rabbitmq/ebin/rabbit.app
     
 ADD run.sh /root
 RUN chmod +x /root/run.sh
